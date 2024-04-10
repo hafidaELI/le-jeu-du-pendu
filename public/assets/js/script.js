@@ -1,3 +1,5 @@
+
+// Objet pour les catégories
 const words = {
     fruits: ['pomme', 'banane', 'orange', 'fraise', 'ananas', 'mangue'],
     pays: ['France', 'Japon', 'Brésil', 'Canada', 'Thaïlande','Luxembourg'],
@@ -48,7 +50,7 @@ const letterChosen = (letter) => {
   lettersChosen.push(letter);
   if (!chosenWord.includes(letter)) {
     // Dessinez une partie du pendu
-    // Ici vous pouvez ajouter la logique pour dessiner le pendu
+    // Ajouter la structure pour dessiner le pendu
   }
   displayWord();
   displayKeyboard();
