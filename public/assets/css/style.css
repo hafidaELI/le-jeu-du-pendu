@@ -1,19 +1,100 @@
-h1{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Style du texte */
+body {
+  font-family: 'Itim', cursive;
+  font-weight: 400;
+  /* font-style: normal; */
+  max-width: 97.5vw;
+  overflow-x: hidden;
+}
+
+h1 {
+  /* display: flex; */
+  /* justify-content: center; */
+  text-align: center;
+  font-weight: bold;
+  color: #66B1F2;
+}
+
+#error-count {
+  color: #e66969;
+  font-weight: bold;
+}
+
+#word-display {
+  font-weight: bold;
 
 }
 
+/* Style des boutons */
+
+.container-buttons {
+  /* max-width: 200px; */
+  max-width: 100%;
+}
+
+#buttonCategory,
+#popup,
+#start-btn {
+  background-color: #aeebf2;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+#popup {
+  background-color: #f2e7ae;
+}
+
+#start-btn {
+  background-color: #e66969;
+}
+
+/* Images et clavier */
+#pendu {
+  max-height: 200px;
+  margin-bottom: 15px;
+}
+
+#licorne-image {
+  max-height: 100px;
+  margin-bottom: 15px;
+}
 
 #keyboard {
-    background-color: #f2c2cf;
-  }
-  
-  .keyboard-row {
-    display: flex;
-  }
-  
+  background-color: #f2c2cf;
+  padding: 10px;
+}
+
+#keyboard button {
+  font-size: 14px;
+  padding: 10px 16px;
+  margin: 3px;
+  max-width: 50px;
+  line-height: 1;
+}
+
+@media (max-width: 576px) {
   #keyboard button {
-    font-size: 20px;
-    padding: 10px 20px;
-    margin: 5px;
+    font-size: 12px;
+    padding: 8px 12px;
+    margin: 3px;
+    max-width: 40px;
   }
+
+  #pendu {
+    max-height: 150px;
+  }
+
+  #licorne-image {
+    max-height: 80px;
+  }
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

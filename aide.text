@@ -1,0 +1,14 @@
+- changer clavier html 
+
+- mettre en place ecouteur d'evenement pour chaque lettre choisie 
+
+- faire 2 fonctions qui comprendront chacune un tableau qui reprendra les lettres du mot generé pour l'un et pour l'autre la même chose mais avec des tirets à la place des lettres
+si la lettre cliquée est présente dans le mot generé aors l'afficher dans le 2eme tableau à la place où il doit être sinon laisser le tiret. 
+
+- afficher 'tableauMotCaché dans le html word-display
+
+
+- revoir en cas de double lettres
+
+- ajouter une condition en cas de reussite (on sait qu'on a gagné sur tableauMotCache est complet et si le compteur est superieur à 0)
+
