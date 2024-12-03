@@ -7,7 +7,6 @@ si la lettre cliquée est présente dans le mot generé aors l'afficher dans le 
 
 - afficher 'tableauMotCaché dans le html word-display
 
-
 - revoir en cas de double lettres
 
 - ajouter une condition en cas de reussite (on sait qu'on a gagné sur tableauMotCache est complet et si le compteur est superieur à 0)
