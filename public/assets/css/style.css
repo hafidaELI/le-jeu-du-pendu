@@ -1,4 +1,4 @@
-/* Style du texte */
+/**************************** Style du texte ***********************************/
 body {
   font-family: 'Itim', cursive;
   font-weight: 400;
@@ -25,7 +25,13 @@ h1 {
 
 }
 
-/* Style des boutons */
+.text-danger {
+  color: red;
+  /* lettres manquantes */
+  font-weight: bold;
+}
+
+/******************************** Style des boutons ***********************************/
 
 .container-buttons {
   /* max-width: 200px; */
@@ -53,7 +59,7 @@ h1 {
   background-color: #e66969;
 }
 
-/* Images et clavier */
+/********************************Images et clavier ******************************/
 #pendu {
   max-height: 200px;
   margin-bottom: 15px;
@@ -65,24 +71,70 @@ h1 {
 }
 
 #keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
   background-color: #f2c2cf;
   padding: 10px;
+  border-radius: 5px;
 }
 
 #keyboard button {
   font-size: 14px;
-  padding: 10px 16px;
-  margin: 3px;
-  max-width: 50px;
-  line-height: 1;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  text-align: center;
+  line-height: 40px;
+}
+
+button.disabled {
+  opacity: 0.5;
+  /* Rendre le bouton visuellement désactivé */
+  pointer-events: none;
+  /* Empêcher tout clic */
+}
+
+/********************************* popup régles du jeu *************************/
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Transparence de l'arrière-plan */
+  display: none;
+  /* Masqué par défaut */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  /* Au-dessus de tout le reste */
+}
+
+/* Style pour le contenu de la popup */
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: justify;
+}
+
+/* Bouton de fermeture */
+#close-popup {
+  margin-top: 20px;
 }
 
 @media (max-width: 576px) {
   #keyboard button {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
     font-size: 12px;
-    padding: 8px 12px;
-    margin: 3px;
-    max-width: 40px;
   }
 
   #pendu {

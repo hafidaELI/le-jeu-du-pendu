@@ -49,6 +49,13 @@ const resetKeyboard = () => {
         button.classList.remove('disabled'); // Supprimer la classe pour réinitialiser l'apparence
     });
 };
+// Fonction pour désactiver le clavier
+const disableKeyboard = () => {
+    keyboardButtons.forEach(button => {
+        button.disabled = true; // Désactiver le bouton
+        button.classList.add('disabled'); // Ajouter une classe pour le style visuel
+    });
+};
 // Fonction pour démarrer une nouvelle partie
 const startGame = () => {
     const category = document.getElementById('category').value;
@@ -111,6 +118,22 @@ const updateErrorCounter = () => {
     errorCounterSpan.textContent = errorCount;
 };
 
+// Fonction qui compare le mot trouvé (tableauMotCache) au mot original (tableauMot) pour mettre les lettres manquantes en rouge
+const revealWordWithErrors = () => {
+    const wordDisplay = document.getElementById('word-display');
+    wordDisplay.innerHTML = ''; // Réinitialiser l'affichage
+
+    tableauMot.forEach((lettre, index) => {
+        if (tableauMotCache[index] === '_') {
+            // Lettre manquante affichée en rouge
+            wordDisplay.innerHTML += `<span class="text-danger mx-3">${lettre}</span>`;
+        } else {
+            // Lettre trouvée affichée normalement
+            wordDisplay.innerHTML += `<span class="mx-3">${lettre}</span>`;
+        }
+    });
+};
+
 // Fonction pour vérifier si la lettre est dans le mot
 const checkLetter = (letter) => {
     let found = false;
@@ -132,10 +155,13 @@ const checkLetter = (letter) => {
     if (errorCount === 0) {
         console.log("PERDU");
         updateLicorneImage('lose');
+        disableKeyboard();
+        revealWordWithErrors();
     };
     if (compareTableau(tableauMotCache, tableauMot)) {
         console.log("Bravo !");
         updateLicorneImage('win');
+        disableKeyboard();
     }
 };
 
